@@ -14,7 +14,7 @@ export function useCreateUser(){
     const res = await fetch(API_BASE_URL + '/api/user', {
     method: 'POST',
     headers: {
-        Authorization: 'Bearer' + accessToken,
+        Authorization: 'Bearer ' + accessToken,
     'Content-Type': 'application/json'
 },
     body: JSON. stringify(user)
