@@ -1,4 +1,4 @@
-import { FormDescription, FormField, FormItem, FormLabel, FormControl } from "@/components/ui/form";
+import { FormDescription, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useFormContext } from "react-hook-form";
 
@@ -21,6 +21,7 @@ export default function DetailSection() {
                     <FormControl>
                         <Input {...field} className="bg-white" />
                     </FormControl>
+                    <FormMessage className="text-red-500"/>
                     
                 </FormItem>
             )}
@@ -30,7 +31,7 @@ export default function DetailSection() {
                 name="city"
                 render={(
                     {field})=>(
-                        <FormItem>
+                        <FormItem className="flex-1">
                             <FormLabel>
                                 Ciudad
                             </FormLabel>
@@ -39,6 +40,7 @@ export default function DetailSection() {
                                 className="bg-white"
                                 />
                             </FormControl>
+                            <FormMessage className="text-red-500"/>
                         </FormItem>
 
                     )}
@@ -49,7 +51,7 @@ export default function DetailSection() {
                 name="coutry"
                 render={(
                     {field})=>(
-                        <FormItem>
+                        <FormItem className="flex-1">
                             <FormLabel>
                                 País
                             </FormLabel>
@@ -58,6 +60,7 @@ export default function DetailSection() {
                                 className="bg-white"
                                 />
                             </FormControl>
+                            <FormMessage className="text-red-500"/>
                         </FormItem>
 
                     )}
@@ -78,6 +81,7 @@ export default function DetailSection() {
                                 placeholder="100.00"
                                 />
                             </FormControl>
+                            <FormMessage className="text-red-500"/>
                         </FormItem>
 
                     )}
@@ -88,7 +92,7 @@ export default function DetailSection() {
                 name="estimatedDeliveryTime"
                 render={(
                     {field})=>(
-                        <FormItem className="max-w-[25%]">
+                        <FormItem className="max-w-[25%] md:max-w-[50%]">
                             <FormLabel>
                                 Tiempo de estimado de entrega (minutos)
                             </FormLabel>
@@ -98,6 +102,7 @@ export default function DetailSection() {
                                 placeholder="30"
                                 />
                             </FormControl>
+                            <FormMessage className="text-red-500"/>
                         </FormItem>
 
                     )}

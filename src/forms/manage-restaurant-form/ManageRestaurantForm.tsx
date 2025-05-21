@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form } from 'react-router-dom';
 import DetailSection from './DetailSection';
+import { Separator } from '@radix-ui/react-separator';
+import CuisinesSection from './CuisinesSection';
 
 type Props = {
     onSave: (restaurnatFromData: FormData) => void;
@@ -29,6 +31,8 @@ return(
         className='space-y-8 bg-gray-50 p-10 rounded-lg'
         >
           <DetailSection />
+          <Separator />
+          <CuisinesSection />
         </form>
     </Form>
 )
