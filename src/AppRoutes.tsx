@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AuthCallBackPage from './pages/AuthCallBackPage';
 import UserProfilePage from './pages/UserProfilePage';
 import ProtectedRoute from './auth/ProtectedRoute';
+import ManageRestaurantPage from './pages/ManageRestaurantPage';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -17,6 +18,11 @@ const AppRoutes = () => {
       <Route path="/User-profile" element={
         <Layout>
           <UserProfilePage />
+        </Layout>
+      } />
+      <Route path="/manage-restaurant" element={
+        <Layout>
+          <ManageRestaurantPage />
         </Layout>
       } />
       </Route>
